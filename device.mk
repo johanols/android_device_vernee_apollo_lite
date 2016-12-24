@@ -78,6 +78,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=fakeiccid \
     ro.com.android.mobiledata=false
 
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.less-secure=true
+
+PRODUCT_PACKAGES += \
+    fs_config_files
+
+
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
