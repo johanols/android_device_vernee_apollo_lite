@@ -9,6 +9,16 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := lite,apollo_lite,k15tb_a
 
+
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_KERNEL):kernel
+
 PRODUCT_PACKAGES += \
    libmtk_symbols \
    libstlport
