@@ -13,9 +13,12 @@ PRODUCT_PACKAGES += \
    libmtk_symbols \
    libstlport
 
-# Lights
+
 PRODUCT_PACKAGES += \
-    lights.mt6797
+    EngineerMode
+
+PRODUCT_PACKAGES += \
+    gralloc_extra
 
 # Audio
 PRODUCT_COPY_FILES += \
