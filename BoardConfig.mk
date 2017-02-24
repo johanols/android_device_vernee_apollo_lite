@@ -65,7 +65,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 TARGET_PROVIDES_LIBLIGHT := true
 
 #ril
-BOARD_RIL_CLASS := ../../../device/jiayu/s3_h560/ril
+BOARD_RIL_CLASS := ../../../device/vernee/apollo_lite/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 SIM_COUNT := 2
