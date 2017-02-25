@@ -47,7 +47,6 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # BLOCK_BASED_OTA
 BLOCK_BASED_OTA := false
-USE_NINJA := false
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216#20971520
@@ -100,7 +99,8 @@ endif
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS := \
+       $(LOCAL_PATH)/sepolicy
 
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
