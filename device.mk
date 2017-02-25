@@ -21,14 +21,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
    libmtk_symbols \
-   libstlport
-
-
-PRODUCT_PACKAGES += \
-    EngineerMode
-
-PRODUCT_PACKAGES += \
-    gralloc_extra
+   libstlport \
+   gralloc_extra
 
 # Audio
 PRODUCT_COPY_FILES += \
