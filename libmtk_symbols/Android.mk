@@ -7,12 +7,13 @@ LOCAL_SRC_FILES := \
     mtk_ui.cpp \
     mtk_audio.cpp \
     mtk_omx.cpp \
-    icu55.c
+    icu55.c \
+    icu53.c
 
 # only for 64bit libraries
 LOCAL_SRC_FILES_64 := mtk_parcel.cpp
 
-LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc
+LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n
 LOCAL_MODULE := libmtk_symbols
 LOCAL_MODULE_TAGS := optional
 
