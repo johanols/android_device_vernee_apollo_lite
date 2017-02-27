@@ -1,7 +1,8 @@
 # mt6797 platform boardconfig
 LOCAL_PATH := device/vernee/apollo_lite
 
-include vendor/mad/config/board.mk
+# Device board elements
+include $(LOCAL_PATH)/board/*.mk
 
 # Platform
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -33,9 +34,6 @@ TARGET_CPU_CORTEX_A53 := true
 
 TARGET_BOOTLOADER_BOARD_NAME := mt6797
 
-# Ashmem
-DISABLE_ASHMEM_TRACKING := true
-BOARD_USES_MTK_HARDWARE := true
 # Kernel
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
@@ -64,24 +62,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Camera
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # LightHAL
 TARGET_PROVIDES_LIBLIGHT := true
-
-#ril
-BOARD_RIL_CLASS := ../../../device/vernee/apollo_lite/ril
-BOARD_CONNECTIVITY_MODULE := conn_soc
-
-SIM_COUNT := 2
-PRODUCT_PROPERTY_OVERRIDES += ro.telephony.sim.count=$(SIM_COUNT)
-
-# CM hardware
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true

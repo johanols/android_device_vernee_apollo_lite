@@ -78,24 +78,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=fakeiccid \
     ro.com.android.mobiledata=false
 
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true
-
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Power
 PRODUCT_PACKAGES += \
     power.default \
     power.mt6797
 
+# Device product elements
+include $(LOCAL_PATH)/product/*.mk
+
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Common stuff
-$(call inherit-product, vendor/mad/config/common.mk)
 
 # Vendor
 $(call inherit-product, vendor/vernee/apollo_lite/apollo_lite-vendor.mk)
