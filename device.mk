@@ -86,8 +86,11 @@ PRODUCT_PACKAGES += \
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
 
-# Dalvik/HWUI
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+# Dalvik heap configurations
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-dalvik-heap.mk)
+
+# Call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui-memory.mk)
 
 # Vendor
 $(call inherit-product, vendor/vernee/apollo_lite/apollo_lite-vendor.mk)
