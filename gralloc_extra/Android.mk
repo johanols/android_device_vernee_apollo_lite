@@ -1,5 +1,4 @@
 LOCAL_PATH := $(call my-dir)
-ifneq ($(filter 6797, $(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -21,4 +20,3 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := \
 LOCAL_MODULE := libgralloc_extra
 
 include $(BUILD_SHARED_LIBRARY)
-endif

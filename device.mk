@@ -19,11 +19,6 @@ endif
 PRODUCT_COPY_FILES += \
    $(LOCAL_KERNEL):kernel
 
-PRODUCT_PACKAGES += \
-   libmtk_symbols \
-   libstlport \
-   gralloc_extra
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
@@ -53,35 +48,6 @@ PRODUCT_COPY_FILES += \
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/etc/.tp/.thermal_policy_00 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/etc/.tp/.thermal_policy_01 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/etc/.tp/.thermal_policy_02 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/etc/.tp/.thermal_policy_03
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    fingerprintd
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
-
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0 \
-    ro.telephony.ril_class=MT6797 \
-    ro.telephony.ril.config=fakeiccid \
-    ro.com.android.mobiledata=false
-
-# Power
-PRODUCT_PACKAGES += \
-    power.default \
-    power.mt6797
 
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk

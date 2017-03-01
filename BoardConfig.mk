@@ -4,8 +4,21 @@ LOCAL_PATH := device/vernee/apollo_lite
 # Device board elements
 include $(LOCAL_PATH)/board/*.mk
 
+# Disable memcpy opt (for audio libraries)
+TARGET_CPU_MEMCPY_OPT_DISABLE := true
+
+# EGL
+BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
+USE_OPENGL_RENDERER := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
+
+# Flags
+BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # Platform
-ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOARD_PLATFORM := mt6797
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_FACTORYIMAGE := true
@@ -64,9 +77,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Display
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # LightHAL
 TARGET_PROVIDES_LIBLIGHT := true

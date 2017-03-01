@@ -1,5 +1,4 @@
 #
-#
 # system.prop for Vernee Apollo Lite
 #
 
@@ -24,7 +23,9 @@ ro.camera.sound.forced=0
 ro.audio.silent=0
 persist.af.audio_patch_fm=1
 
-# enable soft keys
+ro.zygote.preload.enable=0
+
+# Disable Navigation Bar
 qemu.hw.mainkeys=0
 
 # Disable dirty region for Mali
