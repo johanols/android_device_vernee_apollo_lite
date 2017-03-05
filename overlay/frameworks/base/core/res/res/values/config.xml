@@ -33,18 +33,6 @@
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
-    <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ff00ff00</color>
-
-    <!-- Default value for led color when battery is low on charge -->
-    <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is medium charged -->
-    <integer name="config_notificationsBatteryMediumARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is fully charged -->
-    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer>
-
     <integer-array name="config_autoBrightnessLevels">
         <item>16</item>
         <item>32</item>
@@ -84,42 +72,6 @@
         <item>200</item>
         <item>210</item>
         <item>230</item>
-        <item>255</item>
-    </integer-array>
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-    </integer-array>
-    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
         <item>255</item>
     </integer-array>
 
@@ -195,7 +147,7 @@
         <item>"bt-dun"</item>
     </string-array>
 
-    <bool name="config_wifi_background_scan_support">true</bool>
+    <bool name="config_wifi_background_scan_support">false</bool>
 
     <!-- Wifi DualBand -->
     <bool name="config_wifi_dual_band_support">true</bool>    
@@ -203,7 +155,7 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-    <bool name="config_cellBroadcastAppLinks">true</bool>
+    <bool name="config_cellBroadcastAppLinks">false</bool>
 
     <!-- Whether safe headphone volume is enabled or not (country specific). -->
     <bool name="config_safe_media_volume_enabled">true</bool>

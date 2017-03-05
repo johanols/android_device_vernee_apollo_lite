@@ -25,7 +25,7 @@ on fs
     mount_all /fstab.mt6797
 
 on post-fs
-    symlink /sdcard /storage/sdcard0
+#    symlink /sdcard /storage/sdcard0
 
     chown system system /protect_f
     chmod 0770 /protect_f
