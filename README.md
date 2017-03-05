@@ -31,7 +31,7 @@ Front Camera | 5MP (OV)
  * Auto brightness
  * Bluetooth
  * Camera rear/front (Photographs)
- * Camera rear/front (Video - [Use Camu from Play Store](https://play.google.com/store/apps/details?id=com.sumoing.camu))
+ * Camera rear/front
  * Doze
  * Enforcing SELinux
  * Flashlight (statusbar and camera)
