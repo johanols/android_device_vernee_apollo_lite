@@ -41,7 +41,6 @@ Front Camera | 5MP (OV)
  * Micro SD support
  * MTP and Mass Storage modes
  * Offline charging
- * Operator name
  * RAM and ROM
  * RIL
  * Rotation
@@ -51,8 +50,10 @@ Front Camera | 5MP (OV)
  * Video playback
  * Wi-Fi
  * Wi-Fi tethering
+ * HALL Cover
 
 ## Broken/Bugs
+ * Operator name
  * Enforcing SELinux
  * HDR
  * Traffic counter
