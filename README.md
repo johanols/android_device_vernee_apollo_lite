@@ -51,14 +51,12 @@ Front Camera | 5MP (OV)
  * Wi-Fi
  * Wi-Fi tethering
  * HALL Cover
+ * Traffic counter
+ * Operator name
 
 ## Broken/Bugs
- * Operator name
  * Enforcing SELinux
  * HDR
- * Traffic counter
-
-
 
 ### Thanks to:
  * LineageOS team
@@ -68,3 +66,4 @@ Front Camera | 5MP (OV)
  * Daniel HK
  * Team M.A.D
  * JonnyXDA
+ * Moyster
