@@ -3,11 +3,7 @@ PRODUCT_PACKAGES += \
     audio_policy.default \
     audio.r_submix.default \
     audio.a2dp.default \
-    audio.usb.default \
-    libtinyalsa \
-    libtinycompress \
-    libtinymix \
-    libtinyxml
+    audio.usb.default
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
