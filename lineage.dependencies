@@ -1,0 +1,6 @@
+[
+	{
+		"repository": "android_kernel_vernee_apollo_lite",
+		"target_path": "kernel/vernee/apollo_lite"
+	}
+]
