@@ -1,4 +1,4 @@
-# Vernee Apollo Lite - LineageOS 14.1 / Mokee 7.1.2 / RR 7.1.2
+# Vernee Apollo X - LineageOS 14.1 / Mokee 7.1.2 / RR 7.1.2
 ==============
 
 This branch is device for building of the LineageOS 14.1 and other 7.1.2 ROMs. For more information about building the ROM, read our [build manual](manual).
