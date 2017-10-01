@@ -21,6 +21,7 @@ EXTENDED_FONT_FOOTPRINT := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
+TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_FACTORYIMAGE := true
 
@@ -118,3 +119,6 @@ BOARD_SEPOLICY_DIRS := \
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
+# Linker
+LINKER_FORCED_SHIM_LIBS := /system/lib/liblog.so|libxlog.so:/system/lib64/liblog.so|libxlog.so
+LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/bin/mtk_agpsd|libmtk_symbols.so
