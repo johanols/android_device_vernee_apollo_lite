@@ -18,7 +18,7 @@ TARGET_OTA_ASSERT_DEVICE := apollo_x,k15tb_a
 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+	LOCAL_KERNEL := kernel/vernee/apollo_lite
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
