@@ -14,10 +14,6 @@ wifi.direct.interface=p2p0
 ro.opengles.version=196609
 ro.kernel.qemu.gles=0
 
-# Dalvik
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapsize=512m
-
 # Audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
