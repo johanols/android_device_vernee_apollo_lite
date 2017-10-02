@@ -1,7 +1,7 @@
-# Vernee Apollo X - LineageOS 14.1 / Mokee 7.1.2 / RR 7.1.2
+# Vernee Apollo X - LineageOS 14.1
 ==============
 
-This branch is device for building of the LineageOS 14.1 and other 7.1.2 ROMs. For more information about building the ROM, read our [build manual](manual).
+This branch is device for building of the LineageOS 14.1.
 
 ---
 
@@ -22,6 +22,36 @@ Front Camera | 5MP (OV)
 ---
 
 # Build Information
+
+## Prerequisites
+
+Download device, vendor and kernel and put them in `WORKING_DIR/device/apollo_x`, `WORKING_DIR/vendor/apollo_lite` and `WORKING_DIR/kernel/apollo_lite` respectively.
+
+## How to build
+
+In order to start the build process issue the following commands:
+
+1. Apply required patches to core sources.
+```
+sh device/vernee/apollo_x/patches/install.sh
+```
+
+2. Prevent the Jack Java compiler from run out of memory.
+```
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx12g"
+```
+
+3. Prepare the device-specific code.
+```
+source build/envsetup.sh
+breakfast apollo_x
+```
+
+4. Start building! This process can take up to 3 hours to complete.
+```
+croot
+brunch apollo_x
+```
 
 ## Working
  * Adjustable brightness
