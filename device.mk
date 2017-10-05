@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# SPM Loader
+PRODUCT_PACKAGES += \
+    spm_loader
+
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
 
